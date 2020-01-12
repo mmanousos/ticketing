@@ -1,13 +1,4 @@
-<% if @project.errors.any? %>
-  <p>
-    The following <%= pluralize( @project.errors.size, 'error')%> prevented saving your project:
-  </p>
-  <% @project.errors.full_messages.each do |msg| %>
-    <ul>
-      <li><%= msg %></li>
-    </ul>
-  <% end %>
-<% end %>
+<%= render "shared/error", object: @project %>
 
 <%= form_for @project do |f| %>
   <div>

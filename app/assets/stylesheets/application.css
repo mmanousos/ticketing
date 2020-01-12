@@ -18,14 +18,14 @@ html {
   margin-left: 10px;
 }
 
- .alert {
-   color: rgb(230, 21, 21);
- }
+.error-header, .alert{
+  color: rgb(230, 21, 21);
+}
 
- .notice {
-   color: rgb(41, 160, 51);
- }
+.notice {
+  color: rgb(41, 160, 51);
+}
 
- tr {
-   border-top: 1px solid rgb(54, 54, 54);
- }
+tr {
+  border-top: 1px solid rgb(54, 54, 54);
+}

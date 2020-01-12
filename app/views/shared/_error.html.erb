@@ -1,9 +1,10 @@
-<% if object.errors.any? %>
-  <div>
+<% if @project.errors.any? %>
+  <p class='error-header'>
+    <strong>The following <%= pluralize( @project.errors.size, 'error')%> prevented saving your project:</strong>
     <ul>
-      <% object.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+      <% @project.errors.full_messages.each do |msg| %>
+        <li class='alert'><%= msg %></li>
       <% end %>
     </ul>  
-  </div>
+  </p> 
 <% end %>

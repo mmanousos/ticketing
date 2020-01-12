@@ -1,3 +1,5 @@
+<%= render  "shared/error", object: @ticket %>
+
 <%= form_with model: @ticket, local: true do |f| %>
   <div>
     <%= f.label :project %>
