@@ -1,5 +1,5 @@
 class TicketsController < ApplicationController
-  before_action :set_ticket, only: [:edit, :show, :destroy]
+  before_action :set_ticket, only: [:edit, :update, :show, :destroy]
 
   def index 
     @tickets = Ticket.all
@@ -27,12 +27,12 @@ class TicketsController < ApplicationController
   end  
 
   def update 
-   if ticket.update(ticket_params)
-    flash[:notice] = "Ticket was successfully updated."
-    redirect_to ticket_path(@ticket)
-   else
-    render :edit
-   end
+    if @ticket.update(ticket_params)
+      flash[:notice] = "Ticket was successfully updated."
+      redirect_to ticket_path(@ticket)
+    else
+      render :edit
+    end
   end  
 
   def destroy

@@ -3,8 +3,8 @@
   <p><%= project.description %></p>
 </td>  
 <td>
-  open tickets
+  <%= open_tickets_count(project.tickets) %>
 </td>
 <td>
-  all tickets
+  <%= all_tickets_count(project.tickets) %>
 </td>

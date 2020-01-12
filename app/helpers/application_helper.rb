@@ -8,4 +8,12 @@ module ApplicationHelper
   def projects_for_select
     Project.all.map {|p| [p.name, p.id] } 
   end
+
+  def open_tickets_count(tickets) 
+    tickets.select { |t| t.status != 'fixed'}.size
+  end
+
+  def all_tickets_count(tickets) 
+    tickets.size
+  end
 end
