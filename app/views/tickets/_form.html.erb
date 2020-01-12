@@ -1,0 +1,19 @@
+<%= form_with model: @ticket, local: true do |f| %>
+  <div>
+    <%= f.label :project %>
+    <%= f.select(:project_id, projects_for_select) %>
+  </div>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+  <div>
+    <%= f.label :status %>
+    <%= f.select :status, status_options_for_select %>
+  </div>
+  <%= f.submit @ticket.new_record? ? 'Create Ticket' : 'Update Ticket' %>
+<% end %>

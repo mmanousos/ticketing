@@ -1,0 +1,9 @@
+<%= render "shared/title", title: 'Tickets' %>
+
+<% if @tickets %>
+  <%= render "tickets", tickets: @tickets %>
+<% end %>
+
+<div>
+  <%= link_to "New Ticket", new_ticket_path %>
+</div>  

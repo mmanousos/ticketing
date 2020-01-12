@@ -1,0 +1,41 @@
+<%= render "shared/title", title: @ticket.name %>
+
+<p>
+  <%= @ticket.body %>
+</p>
+<p>
+  <strong>Tags:</strong> tags once we get there
+</p>
+<p>
+<%= link_to "Edit", edit_ticket_path(@ticket) %>
+</p>
+<section>
+  <table>
+    <thead>
+      <tr>
+        <th>Status</th>
+        <th>Creator</th>
+        <th>Asignee</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @ticket.status %></td>
+        <td><emphasis>creator name</emphasis></td>
+        <td><emphasis>asignee name</emphasis></td>
+      </tr>  
+    </tbody>
+  </table>
+</section> 
+
+<h2>Comments</h2>
+<!-- once we get to comments -->
+<!-- There are no comments. or iterate over them and display -->
+<!-- form to add a comment if the person is logged in
+
+<strong>Update ticket status</strong>
+
+form includes a selector to change ticket status 
+
+button to submit says "Create Comment" 'or' link to Cancel that clears the form
+-->

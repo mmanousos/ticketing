@@ -8,21 +8,4 @@
 
 <h2>Tickets</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Assignee</th>
-      <th>Status</th>
-      <th>Tags</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>this is my text</td>
-      <td>other text</td>
-      <td>more sample text</td>
-      <td>final text</td>
-    </tr>
-  </tbody>
-</table>
+<%= render 'tickets/tickets', tickets: @project.tickets %>

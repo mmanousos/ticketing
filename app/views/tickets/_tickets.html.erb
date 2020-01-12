@@ -1,0 +1,19 @@
+<section>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Assignee</th>
+        <th>Status</th>
+        <th>Tags</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% tickets.each do |ticket| %>
+        <%= render 'tickets/ticket', ticket: ticket %>
+      <% end %>
+    </tbody>
+  </table>
+</section>  
