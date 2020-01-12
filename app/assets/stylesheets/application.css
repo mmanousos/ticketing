@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+  margin-left: 10px;
+}
+
+ .alert {
+   color: rgb(230, 21, 21);
+ }
+
+ .notice {
+   color: rgb(41, 160, 51);
+ }
+
+ tr {
+   border-top: 1px solid rgb(54, 54, 54);
+ }

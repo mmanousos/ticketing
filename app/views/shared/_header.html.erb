@@ -1,0 +1,13 @@
+<strong>Ticketing</strong> 
+<%= link_to "Projects", projects_path %>
+<!--
+  add links to 
+  Tickets Tags index pages
+  plus Login or Signup
+-->
+
+<% if flash[:notice] %>
+  <p class="notice"><%= flash[:notice] %></p>
+<% else %>
+  <p class="alert"><%= flash[:alert] %></p>  
+<% end %>
