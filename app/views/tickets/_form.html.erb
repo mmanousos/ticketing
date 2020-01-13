@@ -17,5 +17,16 @@
     <%= f.label :status %>
     <%= f.select :status, status_options_for_select %>
   </div>
+  <div>
+    <%= f.label :tags %>
+    <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name  do |cb| %>
+      <% cb.label {cb.check_box(class: 'checkbox') + cb.text} %>
+    <% end %>  
+  </div>
   <%= f.submit @ticket.new_record? ? 'Create Ticket' : 'Update Ticket' %>
+<% end %>
+
+<%= f.label 'Select one or more post categories:' %>
+<%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+  <% cb.label(class: 'checkbox inline') {cb.check_box(class: 'checkbox') + cb.text} %> 
 <% end %>

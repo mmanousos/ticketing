@@ -1,0 +1,25 @@
+<%= render "shared/title", title: 'Tags' %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Tickets</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tags.each do |tag| %>
+      <tr>
+        <td><%= tag.name %></td>
+        <td><%= link_to 'number of tickets', tickets_path %></td> <!-- # of tickets filtered by tag.id -->
+        <td><%= link_to 'Edit', edit_tag_path(tag) %> or 
+            <%= link_to 'Delete', tag_path(tag), method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p>
+  <%= link_to "New Tag", new_tag_path %>
+</p>  
